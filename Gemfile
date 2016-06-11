@@ -44,6 +44,8 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
   gem 'spring'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 
 group :test do
