@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem "font-awesome-rails"
-gem 'bootstrap-sass', '~>3.3.4.1'
+
 gem 'autoprefixer-rails', '~>5.2.0'
 
 # Use jquery as the JavaScript library
@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'haml-rails'
+
+
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+/* font-faces Abel, Questrial */
+
+@import url(https://fonts.googleapis.com/css?family=Abel|Questrial);
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
