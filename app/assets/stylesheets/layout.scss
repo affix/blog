@@ -1,5 +1,13 @@
 @import "variables";
 
+.container {
+  a, a:hover,
+  a:focus, a:visited {
+    text-decoration: underline;
+    background: none;
+  }
+}
+
 .blog-masthead {
   background-color: $accented-bg-color;
   height: 35px;
@@ -7,6 +15,11 @@
   padding-bottom: 3px;
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
   box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  a, a:hover,
+  a:focus, a:visited {
+    text-decoration: none;
+    background: none;
+  }
 }
 
 .blog-nav {
@@ -33,6 +46,9 @@
   background: none;
 }
 
+article {
+  padding-top: 10px;
+}
 
 header {
   height: 120px;

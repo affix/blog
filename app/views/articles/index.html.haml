@@ -1,6 +1,6 @@
 - @articles.each do |article|
   %h2
-    = article.title
+    = link_to article.title, article_path(article)
   = article.body.html_safe
   %br
   %hr
