@@ -11,6 +11,7 @@
     = f.text_field :title
   .field
     = f.label :body
-    = f.text_field :body
+    = f.text_area :body, :class => "tinymce", :rows => 20, :cols => 50
+    = tinymce
   .actions
     = f.submit 'Create Article'

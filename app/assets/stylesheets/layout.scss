@@ -35,7 +35,7 @@
 
 
 header {
-  height: 200px;
+  height: 120px;
   background: $header-footer-bg;
   color: $header-footer-text;
   padding-top: 20px;
@@ -47,8 +47,8 @@ header {
 
 footer{
   background: $header-footer-bg;
-  height: 200px;
-  padding-top: 30px;
+  height: 80px;
+  padding-top: 20px;
   margin-top: 20px;
   position: relative;
   -webkit-box-shadow: inset 5px -2px 0px rgba(0,0,0,0);
