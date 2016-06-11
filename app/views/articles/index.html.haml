@@ -10,4 +10,12 @@
       = link_to "Read More >", article_path(article), class: "pull-right"
     %br
     %hr
+      %span.fa.fa-tags &nbsp;
+      - tag_count = article.tag.count
+      - article.tag.each_with_index do |tag, i|
+        - if (i + 1) == tag_count
+          = tag.title
+        - else
+          = "#{tag.title}, "
+    %hr
     %br

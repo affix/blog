@@ -3,3 +3,8 @@
     %h3.fa.fa-twitter cli
     %br
     %h3.fa.fa-tags Tags
+    %br
+    - get_tag_list.each do |tag|
+      %span.fa.fa-empire
+        = tag.title
+      %br
