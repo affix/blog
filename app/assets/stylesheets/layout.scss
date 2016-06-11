@@ -1,0 +1,88 @@
+@import "variables";
+
+.container {
+  a, a:hover,
+  a:focus, a:visited {
+    text-decoration: underline;
+    background: none;
+  }
+}
+
+.blog-masthead {
+  background-color: $accented-bg-color;
+  height: 35px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  a, a:hover,
+  a:focus, a:visited {
+    text-decoration: none;
+    background: none;
+  }
+}
+
+.blog-nav {
+  text-decoration: none;
+  color: #FFF;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+/* Nav links */
+.blog-nav-item ,
+.blog-nav-item:visited {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+}
+
+article {
+  padding-top: 10px;
+}
+
+header {
+  height: 120px;
+  background: $header-footer-bg;
+  color: $header-footer-text;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Abel';
+
+}
+
+footer{
+  background: $header-footer-bg;
+  height: 80px;
+  padding-top: 20px;
+  margin-top: 20px;
+  position: relative;
+  -webkit-box-shadow: inset 5px -2px 0px rgba(0,0,0,0);
+  box-shadow: inset 5px -2px 0px rgba(0,0,0,0);
+  color: $header-footer-text;
+  font-family: 'Abel';
+  text-align: center;
+
+  .ruby {
+    color: red;
+  }
+
+  a:hover,
+  a:focus,
+  a:visited,
+  a {
+    background: none;
+    text-decoration: none;
+    color: inherit;
+  };
+}

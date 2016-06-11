@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Blog
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .blog-masthead
+      .container
+        %nav.blog-nav
+          = link_to "Home", root_path, class: "blog-nav-item"
+          = link_to "About", "#", class: "blog-nav-item"
+          = link_to "", "http://twitter.com/cli", class: "blog-nav-item fa fa-twitter"
+          = link_to "", "http://github.com/Affix", class: "blog-nav-item fa fa-github"
+          = link_to "", "https://uk.linkedin.com/in/affix", class: "blog-nav-item fa fa-linkedin"
+  %header
+    .container
+      %h1 Keiran Smith
+      Scottish Ruby and iOS Developer
+  .container
+    = yield
+  %footer
+    .container
+      &copy 2016 Keiran Smith
+      %br
+      %span.fa.fa-coffee
+      =link_to "", "http://rubyonrails.org", class: "fa fa-diamond ruby"
+      =link_to "", "http://mariadb.org", class: "fa fa-database"
