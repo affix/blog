@@ -15,16 +15,11 @@
           = link_to "", "http://twitter.com/cli", class: "blog-nav-item fa fa-twitter"
           = link_to "", "http://github.com/Affix", class: "blog-nav-item fa fa-github"
           = link_to "", "https://uk.linkedin.com/in/affix", class: "blog-nav-item fa fa-linkedin"
-  %header
+    %header
+      .container
+        %h1 Keiran Smith
+        Scottish Ruby and iOS Developer
     .container
-      %h1 Keiran Smith
-      Scottish Ruby and iOS Developer
-  .container
-    = yield
-  %footer
-    .container
-      &copy 2016 Keiran Smith
-      %br
-      %span.fa.fa-coffee
-      =link_to "", "http://rubyonrails.org", class: "fa fa-diamond ruby"
-      =link_to "", "http://mariadb.org", class: "fa fa-database"
+      =render "shared/sidebar"
+      = yield
+    =render "shared/footer"
