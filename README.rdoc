@@ -1,28 +1,22 @@
-== README
+== As Yet Un-named Blog Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my as yet un-named blog project. I got fed up of wordpress so decided to roll my own minamilist blogging platform.
 
-Things you may want to cover:
+* Ruby version : >= 2.2
 
-* Ruby version
-
-* System dependencies
+* System dependencies:
+ - mySQL (production)
+ - Ruby
 
 * Configuration
+ - Be sure to change your secret_key for Devise
 
 * Database creation
-
-* Database initialization
+ - bundle exec rake db:migrate
+ - bundle exec rake db:seeds # for default tags
 
 * How to run the test suite
+ - bundle exec rake
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Services
+ - unicorn
