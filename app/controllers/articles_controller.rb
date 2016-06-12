@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :create, :new, :destroy]
+  before_action :verify_admin, only: [:edit, :update, :create, :new, :destroy]
 
   # GET /articles
   # GET /articles.json
@@ -63,6 +64,13 @@ class ArticlesController < ApplicationController
   end
 
   private
+    # Simple way to verify user has post permissions!
+    def verify_admin
+      if !current_user.is_admin
+        redirect_to root_path
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])

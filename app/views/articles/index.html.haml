@@ -17,5 +17,8 @@
           = tag.title
         - else
           = "#{tag.title}, "
+    .pull-right
+      %span.fa.fa-clock-o &nbsp; #{article.created_at.strftime("%d-%m-%Y")} &nbsp; &nbsp;
+      %span.fa.fa-user-secret &nbsp; #{article.user.first_name}
     %hr
     %br
