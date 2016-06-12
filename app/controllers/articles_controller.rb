@@ -26,7 +26,11 @@ class ArticlesController < ApplicationController
   # GET /tag/:title
   def tagged_articles
     @tag = params[:title]
-    @articles = Tag.find_by_title(params[:title]).articles.order("created_at DESC")
+    if Tag.find_by_title(params[:title])
+      @articles = Tag.find_by_title(params[:title]).articles.order("created_at DESC")
+    else
+      redirect_to root_path
+    end
   end
 
   # POST /articles
