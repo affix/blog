@@ -1,2 +1,3 @@
+%h3 Articles Tagged as #{@tag}
 - @articles.each do |article|
   =render partial: "article", locals: {article: article}

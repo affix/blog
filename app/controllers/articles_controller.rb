@@ -23,6 +23,12 @@ class ArticlesController < ApplicationController
   def edit
   end
 
+  # GET /tag/:title
+  def tagged_articles
+    @tag = params[:title]
+    @articles = Tag.find_by_title(params[:title]).articles.order("created_at DESC")
+  end
+
   # POST /articles
   # POST /articles.json
   def create
