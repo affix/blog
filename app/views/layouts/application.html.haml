@@ -5,6 +5,7 @@
     %title Keiran.SCOT
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = auto_discovery_link_tag(:rss, "http://keiran.scot/feed.rss")
     = csrf_meta_tags
   %body
     .blog-masthead

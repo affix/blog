@@ -23,6 +23,15 @@ class ArticlesController < ApplicationController
   def edit
   end
 
+  # GET /feed
+  def feed
+    @articles = Article.all.order("created_at DESC").limit(20)
+
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+  end
+
   # GET /tag/:title
   def tagged_articles
     @tag = params[:title]

@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get '/tag/:title' => 'articles#tagged_articles', as: :tags
   get '/about' => 'about#index'
 
+  get '/feed' => 'articles#feed'
+
   # Example resource route with options:
   #   resources :products do
   #     member do
