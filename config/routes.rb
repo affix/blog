@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  get '/about' => 'about#index'
+
   # Example resource route with options:
   #   resources :products do
   #     member do
