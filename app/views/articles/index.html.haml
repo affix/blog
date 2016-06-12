@@ -2,6 +2,7 @@
   %article
     %h2
       = link_to article.title, article_path(article)
+      =render partial: "adminbar", locals: { article: article}
     - split = article.body.split("<!-- pagebreak -->")
     = split[0].html_safe
     - if split[1]

@@ -1,0 +1,6 @@
+.pull-right
+  - if current_user
+    - if current_user.is_admin
+      .adminbar
+        = link_to "", edit_article_path(article), class: "fa fa-pencil"
+        = link_to "", article, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "fa fa-trash"

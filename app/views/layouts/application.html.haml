@@ -19,6 +19,7 @@
             - if current_user
               .blog-nav-item
                 Welcome Back #{current_user.first_name}
+              = link_to "Sign Out", destroy_user_session_path, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "blog-nav-item"
               - if current_user.is_admin
                 = link_to "New Article", new_article_path, class: "blog-nav-item"
             - else

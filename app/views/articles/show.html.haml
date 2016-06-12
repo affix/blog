@@ -1,7 +1,6 @@
-%p#notice= notice
-
 %article
   %h1
     = @article.title
+    =render partial: "adminbar", locals: { article: @article}
   %p
     = @article.body.html_safe

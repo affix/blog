@@ -13,5 +13,10 @@
     = f.label :body
     = f.text_area :body, :class => "tinymce", :rows => 20, :cols => 50
     = tinymce
+  .field
+    = f.label :tags
+    - get_tag_list.each do |tag|
+      = check_box_tag :tag_ids, tag.id, @article.tag.include?(tag), :name => 'article[tag_ids][]'
+      = label_tag :tag_ids, tag.title
   .actions
     = f.submit 'Create Article'
