@@ -1,0 +1,42 @@
+@mixin media-query($device) {
+  @media screen and (max-width: $device), screen and (max-device-width: $device) {
+    @content;
+  }
+}
+
+@mixin placeholder($color, $style: normal) {
+  ::-webkit-input-placeholder { color: $color; font-size: 16px; font-style: $style; }
+  :-moz-placeholder { color: $color; opacity: 1; font-size: 16px; font-style: $style; }
+  ::-moz-placeholder { color: $color; opacity: 1; font-size: 16px; font-style: $style; }
+  :-ms-input-placeholder { color: $color; font-size: 16px; font-style: $style; }
+}
+
+@mixin transition($selector, $time, $type) {
+  transition: #{$selector} #{$time} #{$type};
+  -moz-transition: #{$selector} #{$time} #{$type};
+  -webkit-transition: #{$selector} #{$time} #{$type};
+  -o-transition: #{$selector} #{$time} #{$type};
+}
+
+@mixin translate($val1, $val2) {
+  -webkit-transform: translate(#{$val1}, #{$val2});
+  -moz-transform: translate(#{$val1}, #{$val2});
+  -ms-transform: translate(#{$val1}, #{$val2});
+  -o-transform: translate(#{$val1}, #{$val2});
+  transform: translate(#{$val1}, #{$val2});
+}
+
+@mixin bgsize($type) {
+  -webkit-background-size: $type;
+  -moz-background-size: $type;
+  -o-background-size: $type;
+  background-size: $type;
+}
+
+
+@mixin bgsizeNum($size1, $size2) {
+  -webkit-background-size: $size1 $size2;
+  -moz-background-size: $size1 $size2;
+  -o-background-size: $size1 $size2;
+  background-size: $size1 $size2;
+}

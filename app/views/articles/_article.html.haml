@@ -1,25 +1,26 @@
-%article
-  %h2
-    = link_to article.title, article_path(article)
-    =render partial: "adminbar", locals: { article: article}
-  - split = article.body.split("<!-- pagebreak -->")
-  = split[0].html_safe
-  - if split[1]
-    %br
-    %br
-    = link_to "Read More >", article_path(article), class: "pull-right"
-  %br
-  %hr
-    %span.fa.fa-tags &nbsp;
-    - tag_count = article.tag.count
-    - article.tag.each_with_index do |tag, i|
-      - if (i + 1) == tag_count
-        = link_to tag.title, tags_path(tag.title)
-      - else
-        = link_to tag.title, tags_path(tag.title)
-        ,
-  .pull-right
-    %span.fa.fa-clock-o &nbsp; #{article.created_at.strftime("%d-%m-%Y")} &nbsp; &nbsp;
-    %span.fa.fa-user-secret &nbsp; #{article.user.first_name}
-  %hr
-  %br
+%article.post
+  %header.post-header
+    %ul.clear
+      %li
+        %time
+          = article.created_at.strftime("%d-%m-%Y")
+      %li.cats
+        - tag_count = article.tag.count
+        - article.tag.each_with_index do |tag, i|
+          - if (i + 1) == tag_count
+            = link_to tag.title, tags_path(tag.title)
+          - else
+            = link_to tag.title, tags_path(tag.title)
+    %h2
+      = link_to article.title, article_path(article)
+      = render partial: "adminbar", locals: { article: article}
+
+  .post-content
+    - split = article.body.split("<!-- pagebreak -->")
+    = split[0].html_safe
+    - if split[1]
+      %br
+      %br
+      = link_to "Read More >", article_path(article), class: "pull-right"
+
+  =#render partial: 'shared/post_footer', locals: {article: article}

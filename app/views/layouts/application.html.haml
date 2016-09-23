@@ -8,33 +8,7 @@
     = auto_discovery_link_tag(:rss, "http://keiran.scot/feed.rss")
     = csrf_meta_tags
   %body
-    .blog-masthead
-      .container
-        %nav.blog-nav
-          = link_to "Home", root_path, class: "blog-nav-item"
-          = link_to "About", "#", class: "blog-nav-item"
-          = link_to "", "http://twitter.com/cli", class: "blog-nav-item fa fa-twitter"
-          = link_to "", "http://github.com/Affix", class: "blog-nav-item fa fa-github"
-          = link_to "", "https://uk.linkedin.com/in/affix", class: "blog-nav-item fa fa-linkedin"
-          = link_to "", "https://keiran.scot/feed.rss", class: "blog-nav-item fa fa-rss"
-          .pull-right
-            - if current_user
-              .blog-nav-item
-                Welcome Back #{current_user.first_name}
-              = link_to "Sign Out", destroy_user_session_path, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "blog-nav-item"
-              - if current_user.is_admin
-                = link_to "New Article", new_article_path, class: "blog-nav-item"
-            - else
-              = link_to "Sign In", new_user_session_path, class: "blog-nav-item"
-              |
-              = link_to "Register", new_user_registration_path, class: "blog-nav-item"
-
-    %header
-      .container
-        %h1 Keiran Smith
-        Scottish Ruby and iOS Developer
-    .container
-      =render "shared/sidebar"
-      .content
+    .wrapper.clear
+      =render 'shared/sidebar'
+      %main.the-content
         = yield
-    =render "shared/footer"

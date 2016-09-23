@@ -1,0 +1,32 @@
+<aside class="user-profile {% if site.fixed_sidebar == 1 %}fixed{% endif %}" role="complementary">
+  <a href="<%= root_path %>"><img class="avatar" src="http://placehold.it/140x140" /></a>
+  <strong class="my-name">Keiran Smith</strong>
+  <span class="my-job-title">Software Engineer</span>
+
+  <div class="mainmenu">
+     <% get_tag_list.each do |tag| %>
+       <%= link_to tag.title, tags_path(tag.title) %>
+     <% end %>
+  </div>
+
+  <p class="about-me">I am a Software Engineer from Scotland, UK. I Currently make things for <a href="https://www.newspaperclub.com">Newspaper Club</a></p>
+
+  <ul>
+    <li><a href="/feed.rss"><svg title="RSS" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= image_path("social-icons.svg#rss-icon") %>"></use></svg></a></li>
+  </ul>
+
+  <% if current_user
+       if current_user.is_admin %>
+          <div class="mainmenu">
+            <%= link_to "New Post", new_article_path %>
+            <%= link_to "Log Out", destroy_user_session_path, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+          </div>
+  <%   end
+      else %>
+          <div class="mainmenu">
+            <%= link_to "Log In", new_user_session_path %>
+            <%= link_to "Register", new_user_registration_path %>
+          </div>
+  <%
+     end %>
+</aside>
