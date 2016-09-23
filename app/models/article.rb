@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
   belongs_to :user
   accepts_nested_attributes_for :tag, :allow_destroy => false
 
+  paginates_per 5
   def to_param
     "#{id}-#{title.downcase.gsub(/[^a-zA-Z0-9]+/, '-').gsub(/-{2,}/, '-').gsub(/^-|-$/, '')}"
   end

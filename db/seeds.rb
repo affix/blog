@@ -7,7 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-tags = ["linux", "mac", "ruby", "development"]
-tags.each do |tag|
-  Tag.create(title: tag)
+#tags = ["linux", "mac", "ruby", "development"]
+#tags.each do |tag|
+#  Tag.create(title: tag)
+#end
+
+require 'securerandom'
+
+50.times do
+  Article.create( :title => "My Post #{SecureRandom.hex(3)}", :body => SecureRandom.hex(128) )
 end

@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require tinymce
+//= require jquery.infinitescroll
