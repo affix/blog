@@ -46,6 +46,8 @@
     }
   }
   .post { position: relative; margin: 40px 0 0; padding: 40px 40px 80px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05);
+    overflow: auto;
+    overflow-wrap: break-word;
     &.page { padding: 40px; }
 
     &:first-of-type { margin: 0; }
@@ -71,7 +73,11 @@
       }
     }
 
-    .post-content { font-size: 16px; line-height: 26px;
+    .post-content {
+      font-size: 16px;
+      line-height: 26px;
+      overflow: auto;
+      overflow-wrap: break-word;
       abbr { border-bottom: 1px dotted $grey-color-normal; cursor: help; }
       code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; }
       address, cite, var { font-style: italic; }
