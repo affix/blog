@@ -3,16 +3,16 @@
     %ul.clear
       %li
         %time
-          = article.created_at.strftime("%d-%m-%Y")
+          = @article.created_at.strftime("%d-%m-%Y")
       %li.cats
-        - tag_count = article.tag.count
-        - article.tag.each_with_index do |tag, i|
+        - tag_count = @article.tag.count
+        - @article.tag.each_with_index do |tag, i|
           - if (i + 1) == tag_count
             = link_to tag.title, tags_path(tag.title)
           - else
     %h2
-      = link_to article.title, article_path(article)
-      = render partial: "adminbar", locals: { article: article}
+      = @article.title
+      = render partial: "adminbar", locals: { article: @article}
 
   %p.post-content
     = @article.body.html_safe
