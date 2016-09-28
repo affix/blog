@@ -14,5 +14,5 @@
       = @article.title
       = render partial: "adminbar", locals: { article: @article}
 
-  %p.post-content
+  .post-content
     = @article.body.html_safe
