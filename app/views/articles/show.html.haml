@@ -7,6 +7,9 @@
       %li.cats
         - tag_count = @article.tag.count
         - @article.tag.each_with_index do |tag, i|
+          - if (i + 1) == tag_count
+            = link_to tag.title, tags_path(tag.title)
+          - else
             = link_to tag.title, tags_path(tag.title)
     %h2
       = @article.title
