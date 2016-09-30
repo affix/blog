@@ -1,8 +1,8 @@
 <footer class="post-footer">
   <div class="share">Share
     <ul class="social-networks">
-      <li class="share-facebook"><a href="https://www.facebook.com/sharer.php?s=100&p[title]=<%= article.title %>&p[url]=<%= article_url(article) %>" class="s_facebook" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"></a><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= image_path("social-icons.svg#facebook-icon") %>"></use><span class="fa fa-facebook">b</span></a></li>
-      <li class="share-twitter"><a href="http://twitter.com/share?url=<%= article_url(article) %>" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= image_path("social-icons.svg#twitter-icon") %>"></use></svg></a></li>
+      <li class="share-twitter"><a href="http://twitter.com/share?url=<%= article_url(article) %>" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="Twitter" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= image_path("social-icons.svg#twitter-icon") %>"></use></svg></a></li>
+      <li class="share-facebook"><a href="https://www.facebook.com/sharer.php?s=100&p[title]=<%= article.title %>&p[url]=<%= article_url(article) %>" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="Facebook" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= image_path("social-icons.svg#facebook-icon") %>"></use></svg></a></li>
     </ul>
   </div>
 </footer>

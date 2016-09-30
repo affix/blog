@@ -144,7 +144,10 @@
           &.active { background-color: $white;
             .social-networks { display: block; }
           }
-          .social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px $grey-color-lightest, 0 3px 4px rgba($black,.05); @include translate(-50%, 0);
+          .social-networks {
+            position: absolute; top: 0px; left: 50%; width: 100px;
+            margin-left: 100px;
+            box-shadow: 0 0 0 1px $grey-color-lightest, 0 3px 4px rgba($black,.05); @include translate(-50%, 0);
             li { position: relative; float: left; width: 50%; min-height: 50px; background: $white; text-align: center; box-shadow: inset 1px 0 0 $grey-color-lightest;
               &:first-of-type { box-shadow: none; }
               &.share-facebook:hover { background: $facebook-brand-color; }
