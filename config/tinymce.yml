@@ -1,7 +1,8 @@
 toolbar:
   - styleselect | bold italic | undo redo | alignjustify | bullist numlist outdent indent
-  - image | link | codesample | code | forecolor backcolor
+  - image | uploadimage | link | codesample | code | forecolor backcolor
 plugins:
+  - uploadimage
   - image
   - link
   - codesample

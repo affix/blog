@@ -25,6 +25,9 @@ Rails.application.routes.draw do
 
   get '/feed' => 'articles#feed'
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
+
   # Example resource route with options:
   #   resources :products do
   #     member do

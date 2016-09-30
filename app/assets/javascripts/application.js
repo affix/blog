@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require prism
 //= require_tree .
 //= require tinymce
 //= require jquery.infinitescroll
