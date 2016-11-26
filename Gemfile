@@ -44,7 +44,8 @@ gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
 group :production do
-  gem 'mysql2'
+  #gem 'mysql2'
+  gem 'pg'
 end
 
 group :development, :test do

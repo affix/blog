@@ -149,7 +149,6 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
-    mysql2 (0.4.3)
     nenv (0.3.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -158,6 +157,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
+    pg (0.19.0)
     pkg-config (1.1.7)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -293,7 +293,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
-  mysql2
+  pg
   rails (= 4.2.5)
   rspec-rails (= 3.4.2)
   sass-rails (~> 5.0)
