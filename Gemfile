@@ -29,6 +29,11 @@ gem "font-awesome-rails"
 gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 gem 'carrierwave'
+
+# Use AWS for carrierwave
+
+gem "fog-aws"
+
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 
